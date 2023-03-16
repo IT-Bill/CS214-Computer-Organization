@@ -62,7 +62,7 @@ col_judge:
 
 col_big_loop:
 	addi $s2, $s2, 1
-	bge $s2, 8, result
+	bge $s2, 8, modify
 
 	# the xor result of col 
 	li $s1, 0
@@ -72,8 +72,8 @@ col_big_loop:
 	
 col_small_loop:
 	# calc the position
-	mul $s4, $s2, 5
-	add $s4, $s4, $s3
+	mul $s4, $s3, 9
+	add $s4, $s4, $s2
 	add $s4, $s5, $s4
 	lb $t1, ($s4)
 	
@@ -87,16 +87,23 @@ col_small_loop:
 	
 	beqz $s1, col_big_loop
 	
-	move $s7, $s2
+	move $t7, $s2
 	
-result:
-	li $v0, 1
-	move $a0, $s6
-	syscall
+modify:
+	beq $t6, -1, print
+
+	mul $s4, $t6, 9
+	add $s4, $s4, $t7
+	add $s4, $s5, $s4
+	lb $t1, ($s4)
+	subi, $t1, $t1, 48
 	
-	li $v0, 1
-	move $a0, $s7
-	syscall
+	not $t1, $t1
+	sb $t1, ($s4)
+	
+	
+print:
+	
 
 
 	
