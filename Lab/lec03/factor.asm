@@ -1,0 +1,9 @@
+.data 
+	
+	
+.text
+main:
+	
+	
+fact:
+	
