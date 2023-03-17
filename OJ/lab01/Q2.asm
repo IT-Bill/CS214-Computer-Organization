@@ -19,8 +19,6 @@ li $t7, -1 # col
 row_judge:
 	# row cnt
 	li $s2, -1
-	
-	#move $s4, $s5
 
 row_big_loop:
 	addi $s2, $s2, 1
@@ -57,8 +55,6 @@ row_small_loop:
 col_judge:	
 	# col cnt
 	li $s2, -1
-	
-	move $s4, $s5
 
 col_big_loop:
 	addi $s2, $s2, 1
@@ -96,21 +92,43 @@ modify:
 	add $s4, $s4, $t7
 	add $s4, $s5, $s4
 	lb $t1, ($s4)
-	subi, $t1, $t1, 48
 	
-	not $t1, $t1
+	beq $t1, 48, zero_to_one
+	beq $t1, 49, one_to_zero
+
+
+one_to_zero:
+	li $t1, 48
 	sb $t1, ($s4)
+	j print
 	
+zero_to_one:
+	li $t1, 49
+	sb $t1, ($s4)
+	j print
+
 	
 print:
+	li $s2, -1
+
+print_big_loop:
+	addi $s2, $s2, 1
+	bge $s2, 4, exit
 	
+	li $s3, 0
 
+print_small_loop:
 
+	mul $s4, $s2, 9
+	add $s4, $s4, $s3
+	add $s4, $s5, $s4
+	lb $a0, ($s4)
 	
+	li $v0, 11
+	syscall
 	
+	addi $s3, $s3, 1
+	blt $s3, 8, print_small_loop
+	j print_big_loop
 
-
-
-
-
-
+exit:
