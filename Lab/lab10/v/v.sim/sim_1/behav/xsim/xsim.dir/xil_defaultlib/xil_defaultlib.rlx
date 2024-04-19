@@ -1,8 +1,0 @@
-0.6
-2017.4
-Dec 15 2017
-21:07:18
-P:/CS214-Computer-Organization/Lab/lab10/v/v.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
-P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sim_1/new/dmemory_sim.v,1681717995,verilog,,,,ramTb,,,,,,,,
-P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sources_1/ip/dmem/sim/dmem.v,1681714242,verilog,,P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sources_1/new/dmemory32.v,,dmem,,,,,,,,
-P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sources_1/new/dmemory32.v,1681717885,verilog,,P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sim_1/new/dmemory_sim.v,,dmemory32,,,,,,,,

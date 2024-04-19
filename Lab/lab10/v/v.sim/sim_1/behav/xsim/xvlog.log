@@ -1,8 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sources_1/ip/dmem/sim/dmem.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dmem
-INFO: [VRFC 10-2263] Analyzing Verilog file "P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sources_1/new/dmemory32.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dmemory32
-INFO: [VRFC 10-2263] Analyzing Verilog file "P:/CS214-Computer-Organization/Lab/lab10/v/v.srcs/sim_1/new/dmemory_sim.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ramTb
-INFO: [VRFC 10-2263] Analyzing Verilog file "P:/CS214-Computer-Organization/Lab/lab10/v/v.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
