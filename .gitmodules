@@ -1,0 +1,4 @@
+[submodule "project"]
+	path = project
+	url = https://github.com/IT-Bill/CS214-CPU
+	branch = main
